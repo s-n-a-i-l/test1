@@ -70,16 +70,16 @@ namespace Geometry
 
         static void PrintChessBoard(int size) 
         {
-            int boardSize = 8; // Стандартная шахматная доска
+            int boardSize = 8; 
 
-            for (int rowBlock = 0; rowBlock < boardSize; rowBlock++) // по строкам клеток
+            for (int rowBlock = 0; rowBlock < boardSize; rowBlock++)
             {
-                for (int line = 0; line < size; line++) // по строкам внутри клетки
+                for (int line = 0; line < size; line++) 
                 {
-                    for (int colBlock = 0; colBlock < boardSize; colBlock++) // по столбцам клеток
+                    for (int colBlock = 0; colBlock < boardSize; colBlock++) 
                     {
                         bool isBlack = (rowBlock + colBlock) % 2 == 0;
-                        for (int ch = 0; ch < size; ch++) // символы внутри клетки
+                        for (int ch = 0; ch < size; ch++)
                         {
                             Console.Write(isBlack ? "*" : " ");
                         }
@@ -93,7 +93,7 @@ namespace Geometry
         {
             for (int i = 1; i <= size; i++)
             {
-                // Пробелы перед левой стороной
+                
                 Console.Write(new string(' ', size - i));
                 Console.Write("/");
 
@@ -108,7 +108,7 @@ namespace Geometry
                 }
             }
 
-            // НИЗ
+            
             for (int i = size; i >= 1; i--)
             {
                 Console.Write(new string(' ', size - i));
