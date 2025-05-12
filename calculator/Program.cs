@@ -34,10 +34,17 @@ namespace calculator
                     break;
                 case '/':
                     if (number == 0 || number2 == 0)
-                        Console.WriteLine("Ошибка операция / на нуль или нуль на число невозможна.");
-
+                    {
+                      Console.WriteLine("Ошибка операция / на нуль или нуль на число невозможна.");
+                    }
+                    else
+                    {
                     result = number / number2;
                     Console.WriteLine("Результат: " + result);
+                    }
+                    break;
+                default:
+                    Console.WriteLine("Неизвестная операция!");
                     break;
 
             }
