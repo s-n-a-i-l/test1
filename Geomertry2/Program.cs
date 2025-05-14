@@ -36,7 +36,7 @@ namespace Geomertry2
             Console.Write("Введите размер ромба: ");
             int n = int.Parse(Console.ReadLine());//парсим в инт, чтоб нельзя было вводить буковы,,,,очень удобно сразу с проверкой
 
-            for (int i = 0; i < 2 * n - 1; i++)
+            for (int i = 0; i < 2 * n ; i++)
             {
 
                 if (i < n) // верх ромба
