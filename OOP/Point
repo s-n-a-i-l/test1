@@ -1,0 +1,47 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Point
+{
+    internal class Point
+    {
+        public double X { get; set; }
+        public double Y { get; set; }
+
+        public Point(double x = 0, double y = 0)
+        {
+            X = x;
+            Y = y;
+            Console.WriteLine($"Constructor:\t{this.GetHashCode()}");
+        }
+        ~Point()
+        {
+            Console.WriteLine($"Destructor:\t{this.GetHashCode()}");
+        }
+
+        public static Point operator +(Point left, Point right)
+        {
+            Point result = new Point();
+            result.X = left.X + right.X;
+            result.Y = left.Y + right.Y;
+            return result;
+        }
+
+        public static Point operator -(Point left, Point right)
+        {
+            Point result = new Point();
+            result.X = left.X - right.X;
+            result.Y = left.Y - right.Y;
+            return result;
+        }
+
+        public void Print()
+        {
+            Console.WriteLine($"X = {X}, Y = {Y}");
+        }
+    
+    }
+}
