@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Point
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Point A = new Point();
+            A.Print();
+            A.X = 2;
+            A.Y = 5;
+            A.Print();
+
+            Point B = new Point(50);
+            B.Print();
+
+            Point C = new Point(7, 8);
+            C.Print();
+            Console.WriteLine("\n--------------------------\n");
+            Point D = A + B;
+            D.Print();
+            Point E = C - A;
+            E.Print();
+            Console.ReadKey();
+        }
+    }
+}
